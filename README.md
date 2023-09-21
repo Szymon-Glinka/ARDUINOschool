@@ -1,2 +1,2 @@
 # ARDUINOschool
-programy arduino ze szkoły
+Just some arduino code from school
