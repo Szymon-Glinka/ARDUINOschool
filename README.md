@@ -2,6 +2,11 @@
 Just some arduino code from school
 
 ## Connection
+* Lights_asyncANDbutton:
+```
+LED's -> 2-4
+Button -> 5
+```
 * RoadLights:
 ```
 Green LED's for car -> 2, 5
@@ -19,11 +24,6 @@ Red LED's for car -> 4, 7
 Green LED's for pedestrian -> 11, 13
 Red LED's for pedestrian -> 10, 12
 button's -> 2, 3
-```
-* Lights_asyncANDbutton:
-```
-LED's -> 2-4
-Button -> 5
 ```
 * pwm:
 ```
