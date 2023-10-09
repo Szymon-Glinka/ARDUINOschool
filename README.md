@@ -2,11 +2,6 @@
 Just some arduino code from school
 
 ## Connection
-* PWM:
-```
-LED's -> 9-11
-Potentiometer -> A0
-```
 * RoadLights:
 ```
 Green LED's for car -> 2, 5
@@ -30,4 +25,8 @@ button's -> 2, 3
 LED's -> 2-4
 Button -> 5
 ```
-
+* pwm:
+```
+LED's -> 9-11
+Potentiometer -> A0
+```
