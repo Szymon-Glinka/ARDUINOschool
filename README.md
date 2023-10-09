@@ -6,3 +6,4 @@ Just some arduino code from school
 ```
 LED's -> 2-4
 Button -> 5
+```
