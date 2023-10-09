@@ -1,5 +1,5 @@
 # ARDUINOschool
-Just some arduino code from school
+Just some arduino projects from school
 
 ## Connection
 FOR ARDUINO UNO
