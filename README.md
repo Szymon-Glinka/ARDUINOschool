@@ -2,6 +2,7 @@
 Just some arduino code from school
 
 ## Connection
+FOR ARDUINO UNO
 * Lights_asyncANDbutton:
 ```
 LED's -> 2-4
