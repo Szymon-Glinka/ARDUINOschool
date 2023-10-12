@@ -1,13 +1,8 @@
-# ARDUINOschool
+## ARDUINOschool
 Just some arduino projects from school
 
 ## Connection
 FOR ARDUINO UNO
-* Lights_asyncANDbutton:
-```
-LED's -> 2-4
-Button -> 5
-```
 * RoadLights:
 ```
 Green LED's for car -> 2, 5
@@ -25,6 +20,17 @@ Red LED's for car -> 4, 7
 Green LED's for pedestrian -> 11, 13
 Red LED's for pedestrian -> 10, 12
 button's -> 2, 3
+```
+* async_lightsANDbtn-oldMillis:
+```
+LED's -> 2-4
+Button -> 5
+```
+* async_lightsANDbtn-newMillis:
+Based on ```attachInterupt``` in arduino IDE, on UNO works only on pins 2 && 3. 
+```
+LED's -> 4-6
+Button -> 3
 ```
 * pwm:
 ```
