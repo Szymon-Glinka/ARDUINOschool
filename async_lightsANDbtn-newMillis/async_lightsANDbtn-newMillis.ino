@@ -1,9 +1,10 @@
-unsigned long t, t1, t2, t3;
+unsigned long t, t1, t2, t3, v_time;
 bool lightON_btn1 = false;
 volatile unsigned long tBTN1;
 volatile int btn_1 = HIGH;
 volatile int btn_2 = HIGH;
 volatile int btn_state = 0;
+int run = 1;
 
 void setup(){
   Serial.begin(9600);
@@ -19,6 +20,7 @@ void setup(){
   t1 = millis();
   t2 = millis();
   t3 = millis();
+  v_time = millis();
   
   //pin to listen to, function, FALLING/RISING - when to run the program or sth
   attachInterrupt(digitalPinToInterrupt(2), inter_btn1, FALLING);
@@ -38,6 +40,10 @@ void inter_btn2(){
 void loop(){
   //two lights on auto
   t = millis();
+  //Serial.print("loop time: ");
+  //Serial.println(t - v_time);
+  v_time = t;
+
   if(t-t1 > 223){
     digitalWrite(5, HIGH);
   }
@@ -55,21 +61,22 @@ void loop(){
   
   //LED button, blink button
   if(!btn_1){
-    Serial.println("btn worked");
     lightON_btn1 = true;
     btn_1 = HIGH;
   }
-  if(t-tBTN1 < 2000 && lightON_btn1 == true){
-    if(t-t3 > 100)
+  if(t-tBTN1 < 4000 && lightON_btn1 == true){
+    if(t-t3 > 100*run/2)
       digitalWrite(6, HIGH);
-    if(t-t3 > 300){
+    if(t-t3 > 100*run){
       digitalWrite(6, LOW);
       t3 = t;
+      run++;      
     }
   }
-  else if(t-tBTN1 > 2000){
+  else if(t-tBTN1 > 4000){
     digitalWrite(6, LOW);
     lightON_btn1 = false;
+    run = 1;
   }
 
   //LED button, toggle button
