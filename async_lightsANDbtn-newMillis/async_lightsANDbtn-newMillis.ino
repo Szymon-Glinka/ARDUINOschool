@@ -1,7 +1,9 @@
-unsigned long t, t1, t2, t4;
-volatile unsigned long t3;
-volatile int btn = HIGH;
-bool lightON = false;
+unsigned long t, t1, t2, t3;
+bool lightON_btn1 = false;
+volatile unsigned long tBTN1;
+volatile int btn_1 = HIGH;
+volatile int btn_2 = HIGH;
+volatile int btn_state = 0;
 
 void setup(){
   Serial.begin(9600);
@@ -9,19 +11,28 @@ void setup(){
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
   pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  
+  pinMode(2, INPUT_PULLUP);
   pinMode(3, INPUT_PULLUP);
 
   t1 = millis();
   t2 = millis();
-  t4 = millis();
+  t3 = millis();
   
   //pin to listen to, function, FALLING/RISING - when to run the program or sth
-  attachInterrupt(digitalPinToInterrupt(3), inter, FALLING);
+  attachInterrupt(digitalPinToInterrupt(2), inter_btn1, FALLING);
+  attachInterrupt(digitalPinToInterrupt(3), inter_btn2, FALLING);
 }
 
-void inter(){
-  btn = LOW;
-  t3 = millis();
+void inter_btn1(){
+  btn_1 = LOW;
+  tBTN1 = millis();
+}
+
+void inter_btn2(){
+  btn_2 = LOW;
+  
 }
 
 void loop(){
@@ -35,28 +46,41 @@ void loop(){
     t1 = t;
   }
   if(t-t2 > 1000){
-    digitalWrite(6, HIGH);
+    digitalWrite(4, HIGH);
   }
   if(t-t2 > 2000){
-    digitalWrite(6, LOW);
+    digitalWrite(4, LOW);
     t2 = t;
   }
   
-  //LED "on" button
-  if(!btn){
-    lightON = true;
-    btn = HIGH;
+  //LED button, blink button
+  if(!btn_1){
+    Serial.println("btn worked");
+    lightON_btn1 = true;
+    btn_1 = HIGH;
   }
-  if(t-t3 < 2000 && lightON == true){
-    if(t-t4 > 200)
-      digitalWrite(4, HIGH);
-    if(t-t4 > 400){
-      digitalWrite(4, LOW);
-      t4 = t;
+  if(t-tBTN1 < 2000 && lightON_btn1 == true){
+    if(t-t3 > 100)
+      digitalWrite(6, HIGH);
+    if(t-t3 > 300){
+      digitalWrite(6, LOW);
+      t3 = t;
     }
   }
-  else if(t-t3 > 2000){
-    digitalWrite(4, LOW);
-    lightON = false;
+  else if(t-tBTN1 > 2000){
+    digitalWrite(6, LOW);
+    lightON_btn1 = false;
+  }
+
+  //LED button, toggle button
+  if(!btn_2 && btn_state == 0){
+    digitalWrite(7, HIGH);
+    btn_state = 1;
+    btn_2 = HIGH;
+  }
+  if(!btn_2 && btn_state == 1){
+    digitalWrite(7, LOW);
+    btn_state = 0;
+    btn_2 = HIGH;
   }
 }
