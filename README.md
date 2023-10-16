@@ -24,8 +24,8 @@ button's -> 2, 3
 * async_lightsANDbtn-newMillis:
 Based on ```attachInterupt``` in arduino IDE. On UNO works only with pins 2 && 3. 
 ```
-LED's -> 4-6
-Button -> 3
+LED's -> 4-7
+Button -> 2, 3
 ```
 * async_lightsANDbtn-oldMillis:
 ```
