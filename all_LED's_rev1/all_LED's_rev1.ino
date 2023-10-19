@@ -92,7 +92,7 @@ void loop(){
 
   //pwm LED's
   potRead = analogRead(A0);
-  pwmPot = potRead/4;
+  pwmPot = map(potRead, 0, 1023, 0, 255);
   analogWrite(pwmLed, pwmPot);
   
   if(!btn_2){
