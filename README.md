@@ -21,6 +21,13 @@ Green LED's for pedestrian -> 11, 13
 Red LED's for pedestrian -> 10, 12
 button's -> 2, 3
 ```
+* all_LED's_rev1:
+```
+buttons -> 2, 3, 8
+potentiometer -> A0
+LED's -> 4-7
+RGB LED -> 9-11
+```
 * async_lightsANDbtn-newMillis:
 Based on ```attachInterupt``` in arduino IDE. On UNO works only with pins 2 && 3. 
 ```
