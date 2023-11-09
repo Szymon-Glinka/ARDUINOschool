@@ -46,7 +46,7 @@ Potentiometer -> A0
 ```
 * servo_based_game:
   ```STILL IN PROGRESS```
-* stepper_motor:
-[L293E](https://pdf1.alldatasheet.com/datasheet-pdf/view/227655/STMICROELECTRONICS/L293E.html)
-[Stepper.h](https://www.arduino.cc/reference/en/libraries/stepper/)
+* stepper_motor:  
+[L293E](https://pdf1.alldatasheet.com/datasheet-pdf/view/227655/STMICROELECTRONICS/L293E.html)  
+[Stepper.h](https://www.arduino.cc/reference/en/libraries/stepper/) 
 
