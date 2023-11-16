@@ -46,7 +46,7 @@ Potentiometer -> A0
 ```
 * servo_based_game:
   ```STILL IN PROGRESS```
-* shift_register
+* shift_register:
   ```docs to be made```
 * stepper_motor:  
 [L293E datasheet](https://pdf1.alldatasheet.com/datasheet-pdf/view/227655/STMICROELECTRONICS/L293E.html)  
