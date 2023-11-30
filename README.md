@@ -44,7 +44,7 @@ Button -> 5
 LED's -> 9-11
 Potentiometer -> A0
 ```
-* servo_based_game:
+* servo_based_game:  
   ```TO BE FINISHED```
 * shift_register:  
   ```links```       
