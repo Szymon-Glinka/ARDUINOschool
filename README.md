@@ -48,11 +48,9 @@ uses arduino's built-in shiftOut(); function
 shiftOut(dataPin, clockPin, bitOrder, value);
 bitOrder: MSBFIRST, LSBFIRST
 ```
-```links```       
 [shift register datascheet - ...595A](https://www.alldatasheet.com/datasheet-pdf/pdf/12192/ONSEMI/MC74HC595A.html)  
 [8x8 led matrix's datascheet](https://components101.com/sites/default/files/component_datasheet/LED%20Matrix%20Datasheet.pdf)
-### stepper_motor:  
-```links```    
+### stepper_motor:    
 [H-bridge's datasheet - L293E](https://pdf1.alldatasheet.com/datasheet-pdf/view/227655/STMICROELECTRONICS/L293E.html)  
 [Stepper.h](https://www.arduino.cc/reference/en/libraries/stepper/) 
 
