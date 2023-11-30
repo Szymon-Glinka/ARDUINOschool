@@ -43,8 +43,8 @@ Potentiometer -> A0
 ### servo_based_game:  
 ```TO BE FINISHED```
 ### shift_register:  
+uses arduino's built-in ```shiftOut();``` function
 ```
-uses arduino's built-in shiftOut(); function
 shiftOut(dataPin, clockPin, bitOrder, value);
 bitOrder: MSBFIRST, LSBFIRST
 ```
