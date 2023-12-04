@@ -1,5 +1,5 @@
 ## Programms
-### 8x8 button matrix
+### 8x8 button matrix:
 ```DOCS TO BE MADE```
 
 ### RoadLights:
@@ -45,6 +45,7 @@ Potentiometer -> A0
 ```
 ### servo_based_game:  
 ```TO BE FINISHED```
+
 ### shift_register:  
 used to control 8x8 led matrix  
 uses arduino's built-in ```shiftOut();``` function
