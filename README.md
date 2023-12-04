@@ -43,6 +43,7 @@ Potentiometer -> A0
 ### servo_based_game:  
 ```TO BE FINISHED```
 ### shift_register:  
+used to control 8x8 led matrix
 uses arduino's built-in ```shiftOut();``` function
 ```
 shiftOut(dataPin, clockPin, bitOrder, value);
