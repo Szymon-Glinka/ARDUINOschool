@@ -1,5 +1,5 @@
 ## Programms
-### 8x8 button matrix:
+### 8x8 button matrix calculator:
 ```DOCS TO BE MADE```
 
 ### RoadLights:
